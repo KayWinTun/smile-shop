@@ -1,0 +1,81 @@
+Starting Point
+===============
+      routes
+       - web.php
+      
+      resource/views
+       - welcome.blade.php
+
+localhost:8000 (default page)
+===============/about(about page)
+===============/contact(contact page)
+
+Blade Template Engine
+=====================
+Home.php
+ - HTML(start)
+ - Nav
+ - Header (custom) //မတူညီသောအပိုင်း
+ - Body (custom)  //မတူညီသောအပိုင်း
+ - Footer
+ - HTML(end)
+
+About.php
+ - HTML(start)
+ - Nav
+ - Header (custom) //မတူညီသောအပိုင်း
+ - Body (custom)  //မတူညီသောအပိုင်း
+ - Footer
+ - HTML(end)
+
+Layout File (Parent)
+ - HTML(start)
+ - Nav
+ - @yield () // မတူညီသောအပိုင်းနေရာ
+ - Footer
+ - HTML(end)
+
+Main File (child)
+ - @extends() // parent နဲ့ချိတ်ရန် 
+ - @section()
+      (မတူညီသောအပိုင်းကို section ကြားမှာရေး)
+ - @endsection
+ - use(.) file path
+
+
+MVC (model, view, controller)
+============================
+ - route
+ - controller (class)
+ - View (data show)
+
+
+CRUD Process
+============
+ -Route
+   - resource
+     Route::resource('category','CategoryController');
+
+ - Controller
+   - resource
+     php artism make:controller CategoryController -r
+
+ - Methods
+  - GET (4)
+  - POST, PUT, DELETE(1)
+
+ - UI
+   - creat form
+   - edit form
+   - display list (read)
+   - detail (read - optional) //လိုရင်လို မလိုရင်မလိုဘူး
+
+
+Database Migration
+===================
+     - php artisan make:model Brand -m -r
+      (model, migration, resource controller)
+
+     - brand, category, subcategory, item, order
+
+   
